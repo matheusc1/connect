@@ -1,12 +1,12 @@
 # Connect 🔗
 
-Aplicação web desenvolvida utilizando **Next.js** para contagem de indicações por links e clicks.
+O **Connect** é uma aplicação web que permite a criação e gestão de links de indicação, rastreando cliques e gerando um ranking de usuários mais influentes. Desenvolvido com **Next.js**, **React** e tecnologias modernas para garantir alto desempenho e usabilidade.
 
 ## Funcionalidades ✨
 
-- Cadastro de usuário para pegar um link de indicação
-- Sistema de indicação onde é possível se inscrever pelo link de outra pessoa
-- Ranking de indicações
+- **Cadastro de usuários**: Cada usuário recebe um link exclusivo de indicação.  
+- **Sistema de indicação**: Novos usuários podem se inscrever através do link de outra pessoa.  
+- **Ranking de indicações**: Exibe os usuários com mais indicações bem-sucedidas.
 
 ## Tecnologias utilizadas 💻
 
@@ -19,56 +19,65 @@ Aplicação web desenvolvida utilizando **Next.js** para contagem de indicaçõe
 - [Orval](https://orval.dev/)
 - [Biome](https://biomejs.dev/)
 
-## Instalação
+## Instalação 🛠️
 
 ### Pré-requisitos
 
-- Node.js instalado (versão recomendada: LTS).
-- É recomendado ter o Docker instalado.
-- Git.
+- **Node.js** instalado (versão recomendada: LTS).
+- **Docker** instalado (opcional, mas recomendado).
+- **Git**.
 
 ### Passo a passo
 
-1. Clone o repositório e acesse a pasta do projeto:
+1. Clone o repositório e instale as dependências
 
-```bash
+```sh
 git clone https://github.com/matheusc1/connect
 cd connect
-```
-2. Instale as dependências e inicie a aplicação:
-
-```bash
 npm install
-npm run dev
 ```
 
-3. Clone o repositório back-end e instale suas dependências:
+2. Clone o repositório back-end e instale suas dependências
 
-```bash
+```sh
 git clone https://github.com/rocketseat-education/nlw-connect-node
 npm install
 ```
-4. Suba os containers no Docker.
+3. Suba os containers no Docker (Banco de dados Postgres e Redis).
 
-```bash
+```sh
 docker compose up -d
 ```
 
-5. Crie as bases de dados
+4. Execute as migrations do banco de dados
 
-```bash
+```sh
 npm run db:migrate
 ```
 
-6. Execute a API:
+5. Inicie o servidor back-end
 
-```bash
+```sh
 npm run dev
 ```
 
-- Caso não utilize o Docker, crie uma conta gratuita nos sites: [neon.tech](https://neon.tech/) e [Upstash](https://upstash.com/)
-- Após isso configure um banco de dados Postgres no neon e um Redis no Upstash.
-- Troque a URL no arquivo `.env` para as URLs dos serviços utilizados.
+6. Inicie o front-end
+
+```sh
+npm run dev
+```
+
+### 🚀 Configuração sem Docker
+Caso prefira não utilizar Docker, siga estas etapas:
+
+1. **Crie um banco de dados Postgres e um Redis**
+
+   - Registre-se gratuitamente no [Neon.tech](https://neon.tech/) (PostgreSQL) e [Upstash](https://upstash.com/) (Redis).  
+   - Configure os serviços e copie as URLs de conexão.  
+
+2. **Configure as variáveis de ambiente**
+
+   - Substitua as variáveis no arquivo `.env` com as URLs obtidas no Neon e Upstash.  
 
 ## Créditos 💡
 
